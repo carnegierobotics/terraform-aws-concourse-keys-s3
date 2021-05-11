@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "keys" {
-  bucket        = module.default_label.id
-  tags          = module.default_label.tags
+  bucket        = module.this.id
+  tags          = module.this.tags
   acl           = "private"
   force_destroy = var.bucket_force_destroy
 

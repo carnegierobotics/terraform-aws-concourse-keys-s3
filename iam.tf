@@ -27,7 +27,7 @@ data "aws_iam_policy_document" "cross_account" {
 }
 
 resource "aws_iam_role" "keys" {
-  name                = module.default_label.id
+  name                = module.this.id
   description         = "Cross account key access role for Concourse workers"
   assume_role_policy  = data.aws_iam_policy_document.assume_role.json
 }
