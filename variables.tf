@@ -1,37 +1,3 @@
-variable "namespace" {
-  type        = string
-  description = "Namespace (e.g. `cp` or `cloudposse`)"
-}
-
-variable "stage" {
-  type        = string
-  description = "Stage (e.g. `prod`, `dev`, `staging`)"
-}
-
-variable "name" {
-  type        = string
-  description = "Application or solution name (e.g. `app`)"
-  default     = "concourse"
-}
-
-variable "delimiter" {
-  type        = string
-  default     = "-"
-  description = "Delimiter to be used between `namespace`, `stage`, `name` and `attributes`"
-}
-
-variable "attributes" {
-  type        = list(string)
-  default     = []
-  description = "Additional attributes (e.g. `1`)"
-}
-
-variable "tags" {
-  type        = map(string)
-  default     = {}
-  description = "Additional tags (e.g. map(`BusinessUnit`,`XYZ`)"
-}
-
 variable "keys_version" {
   description = "Change this if you want to re-generate Concourse keys"
   default     = "1"
